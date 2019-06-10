@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--   -->
+<!-- Copyright 2018-2019 Tencent Timi J5 Studio, Inc. All Rights Reserved. -->
+<!--   -->
+<!-- 2019/5/10 14:50 -->
+<!--   -->
+<Blackboards>
+	<Types />
+	<Blackboard Name="BB_ServerTest" bHasSynchronizedKeys="false">
+		<Entry Name="TestKeyNum" Type="int" Default="0" bInstanceSynced="false" Desc="" />
+		<Entry Name="SelfActor" Type="Object:Actor" TypeDesc="Type is a class" bInstanceSynced="false" Desc="" />
+		<Entry Name="TestKey1" Type="int" Default="0" bInstanceSynced="false" Desc="" />
+		<Entry Name="TestKey2" Type="int" Default="0" bInstanceSynced="false" Desc="" />
+		<Entry Name="TestKey3" Type="int" Default="0" bInstanceSynced="false" Desc="" />
+	</Blackboard>
+	<Blackboard Name="BT_Guide_data" bHasSynchronizedKeys="false">
+		<Entry Name="SelfActor" Type="Object:Actor" TypeDesc="Type is a class" bInstanceSynced="false" Desc="" />
+		<Entry Name="MyPlayerActor" Type="Object:Object" TypeDesc="Type is a class" bInstanceSynced="false" Desc="" />
+		<Entry Name="TalkStep" Type="int" Default="0" bInstanceSynced="false" Desc="" />
+		<Entry Name="TalkSubStep" Type="int" Default="0" bInstanceSynced="false" Desc="" />
+		<Entry Name="TargetPoint" Type="vector3" DefaultX="0.0" DefaultY="0.0" DefaultZ="0.0" bInstanceSynced="false" Desc="" />
+	</Blackboard>
+	<Blackboard Name="BT_Monster_Normal" bHasSynchronizedKeys="false">
+		<Entry Name="TargetActor" Type="int" Default="0" bInstanceSynced="false" Desc="" />
+		<Entry Name="NeedGoHome" Type="bool" Default="false" bInstanceSynced="false" Desc="" />
+		<Entry Name="SelfActor" Type="Object:Actor" TypeDesc="Type is a class" bInstanceSynced="false" Desc="" />
+		<Entry Name="ReturnPos" Type="vector3" DefaultX="0.0" DefaultY="0.0" DefaultZ="0.0" bInstanceSynced="false" Desc="" />
+		<Entry Name="PatrolPos" Type="vector3" DefaultX="0.0" DefaultY="0.0" DefaultZ="0.0" bInstanceSynced="false" Desc="" />
+		<Entry Name="StandTime" Type="float" Default="0.0" bInstanceSynced="false" Desc="" />
+		<Entry Name="PatrolType" Type="int" Default="0" bInstanceSynced="false" Desc="" />
+		<Entry Name="NeedFlee" Type="bool" Default="false" bInstanceSynced="false" Desc="" />
+	</Blackboard>
+	<Blackboard Name="BT_Patrol_data" bHasSynchronizedKeys="false">
+		<Entry Name="PatrolPoints" Type="Object:LuaPointsArray" TypeDesc="Type is a class" bInstanceSynced="false" Desc="" />
+		<Entry Name="TargetPoint" Type="vector3" DefaultX="0.0" DefaultY="0.0" DefaultZ="0.0" bInstanceSynced="false" Desc="" />
+		<Entry Name="SelfActor" Type="Object:Actor" TypeDesc="Type is a class" bInstanceSynced="false" Desc="" />
+		<Entry Name="SpawnPosition" Type="vector3" DefaultX="0.0" DefaultY="0.0" DefaultZ="0.0" bInstanceSynced="false" Desc="出生时的坐标" />
+		<Entry Name="RandomNum" Type="float" Default="0.0" bInstanceSynced="false" Desc="" />
+		<Entry Name="MyPlayerActor" Type="Object:Object" TypeDesc="Type is a class" bInstanceSynced="false" Desc="" />
+		<Entry Name="TalkContent" Type="string" Default="" bInstanceSynced="false" Desc="聊天气泡内容" />
+		<Entry Name="TalkShowTime" Type="float" Default="0.0" bInstanceSynced="false" Desc="聊天气泡显示时间" />
+		<Entry Name="FaceAngle" Type="float" Default="0.0" bInstanceSynced="false" Desc="面朝向" />
+		<Entry Name="GroupIndex" Type="int" Default="0" bInstanceSynced="false" Desc="" />
+	</Blackboard>
+	<Blackboard Name="TriggerObject" bHasSynchronizedKeys="false">
+		<Entry Name="SelfActor" Type="Object:Actor" TypeDesc="Type is a class" bInstanceSynced="false" Desc="" />
+		<Entry Name="ActionName" Type="string" Default="" bInstanceSynced="false" Desc="要执行的操作" />
+	</Blackboard>
+</Blackboards>

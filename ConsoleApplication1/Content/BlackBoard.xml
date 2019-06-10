@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<metalib name="BlackBoard" version="1">
+  <struct id="1" name="BB_ServerTest" version="1">
+    <entry defaultvalue="0" desc="" name="TestKeyNum" type="int"/>
+    <entry defaultvalue="0" desc="" name="TestKey1" type="int"/>
+    <entry defaultvalue="0" desc="" name="TestKey2" type="int"/>
+    <entry defaultvalue="0" desc="" name="TestKey3" type="int"/>
+  </struct>
+  <struct id="2" name="BT_Monster_Normal" version="1">
+    <entry defaultvalue="0" desc="" name="TargetActor" type="int"/>
+    <entry defaultvalue="0" desc="" name="NeedGoHome" type="int8"/>
+    <entry count="3" defaultvalue="" desc="" name="ReturnPos" type="float"/>
+    <entry count="3" defaultvalue="" desc="" name="PatrolPos" type="float"/>
+    <entry defaultvalue="0.0" desc="" name="StandTime" type="float"/>
+    <entry defaultvalue="0" desc="" name="PatrolType" type="int"/>
+    <entry defaultvalue="0" desc="" name="NeedFlee" type="int8"/>
+  </struct>
+</metalib>

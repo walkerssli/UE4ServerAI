@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerCode>
+  <services>
+    <service BlackboardKey="NeedFlee" name="BTService_AccessAndExitFlee" tickfunc="TickAccessAndExitFlee"/>
+    <service BlackboardKey="TargetActor" BlackboardKey2="NeedGoHome" name="BTService_AssessAndAdjustTarget" tickfunc="TickAssessAndAdjustTarget"/>
+    <service BlackboardKey="NeedGoHome" OnBecomeRelevant="OnBecomeRelevantOutOfActiveRangeSettingHome" name="BTService_OutOfActiveRangeSettingHome" tickfunc="TickOutOfActiveRangeSettingHome"/>
+    <service BlackboardKey="NeedGoHome" name="BTService_OutOfTraceRangeSettingHome" tickfunc="TickOutOfTraceRangeSettingHome"/>
+    <service BlackboardKey="TargetActor" name="BTService_SearchTarget" tickfunc="TickSearchTarget"/>
+    <service BlackboardKey="TargetActor" name="BTService_AccessAndFlee" tickfunc="TickAccessAndFlee"/>
+  </services>
+  <tasks>
+    <task enterfunc="EnterMoveToHome" exitfunc="ExitMoveToHome" name="BTTask_MoveToHome" tickfunc="TickMoveToHome"/>
+    <task BlackboardKey="TargetActor" enterfunc="EnterMoveToTarget" exitfunc="ExitMoveToTarget" name="BTTask_MoveToTarget" tickfunc="TickMoveToTarget"/>
+    <task BlackboardKey="StandTime" enterfunc="EnterMoveToPatrol" exitfunc="ExitMoveToPatrol" name="BTTask_MoveToPatrol" tickfunc="TickMoveToPatrol"/>
+    <task enterfunc="EnterMoveToFlee" exitfunc="ExitMoveToFlee" name="BTTask_MoveToFlee" tickfunc="TickMoveToFlee"/>
+    <task BlackboardKey="TargetActor" abortfunc="AbortAttackTarget" enterfunc="EnterAttackTarget" exitfunc="ExitAttackTarget" name="BTTask_AttackTarget" tickfunc="TickAttackTarget"/>
+    <task BlackboardKey="StandTime" enterfunc="EnterWaitBlackboardTime" exitfunc="ExitWaitBlackboardTime" name="BTTask_WaitBlackboardTime" tickfunc="TickWaitBlackboardTime"/>
+  </tasks>
+</ServerCode>

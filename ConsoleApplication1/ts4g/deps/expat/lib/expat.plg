@@ -1,0 +1,47 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: expat - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\jackyai\LOCALS~1\Temp\RSP5D.tmp" with contents
+[
+/nologo /MTd /W3 /GX- /ZI /Od /D "_DEBUG" /D "COMPILED_FROM_DSP" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /FR"..\..\..\tsf4g\deps\expat\Debug/" /Fo"..\..\..\tsf4g\deps\expat\Debug/" /Fd"..\..\..\tsf4g\deps\expat\Debug/" /FD /GZ /c 
+"I:\work\tsf4g\deps\expat\lib\xmlparse.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jackyai\LOCALS~1\Temp\RSP5D.tmp" 
+Creating temporary file "C:\DOCUME~1\jackyai\LOCALS~1\Temp\RSP5E.tmp" with contents
+[
+/nologo /MTd /W3 /GX /ZI /Od /D "_DEBUG" /D "COMPILED_FROM_DSP" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /FR"..\..\..\tsf4g\deps\expat\Debug/" /Fo"..\..\..\tsf4g\deps\expat\Debug/" /Fd"..\..\..\tsf4g\deps\expat\Debug/" /FD /GZ /c 
+"I:\work\tsf4g\deps\expat\lib\xmlrole.c"
+"I:\work\tsf4g\deps\expat\lib\xmltok.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jackyai\LOCALS~1\Temp\RSP5E.tmp" 
+Creating temporary file "C:\DOCUME~1\jackyai\LOCALS~1\Temp\RSP5F.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /pdb:none /debug /machine:I386 /def:".\libexpat.def" /out:"Debug\libexpat_d.dll" /implib:"..\..\lib/libexpat_d.lib" 
+\work\tsf4g\tsf4g\deps\expat\Debug\xmlparse.obj
+\work\tsf4g\tsf4g\deps\expat\Debug\xmlrole.obj
+\work\tsf4g\tsf4g\deps\expat\Debug\xmltok.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\jackyai\LOCALS~1\Temp\RSP5F.tmp"
+<h3>Output Window</h3>
+Compiling...
+xmlparse.c
+Compiling...
+xmlrole.c
+xmltok.c
+Generating Code...
+Linking...
+   Creating library ..\..\lib/libexpat_d.lib and object ..\..\lib/libexpat_d.exp
+libexpat_d.exp : warning LNK4070: /OUT:LIBEXPAT.dll directive in .EXP differs from output filename "Debug\libexpat_d.dll"; ignoring directive
+
+
+
+<h3>Results</h3>
+libexpat_d.dll - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,16 @@
+#libevent pkg-config source file
+
+prefix=/data/ansonlei/tsf4g_proj/trunk/deps/libevent-2.1.8-stable
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libevent
+Description: libevent is an asynchronous notification event loop library
+Version: 2.1.8-stable
+Requires:
+Conflicts:
+Libs: -L${libdir} -levent
+Libs.private: -lcrypto -lrt 
+Cflags: -I${includedir}
+

@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: expat_static - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\mickeyxu\LOCALS~1\Temp\RSP8FA.tmp" with contents
+[
+/nologo /MDd /W3 /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "COMPILED_FROM_DSP" /D "_MBCS" /D "_LIB" /D "XML_STATIC" /FR"..\..\..\..\tsf4g_output\deps\expat\Debug_static/" /Fo"..\..\..\..\tsf4g_output\deps\expat\Debug_static/" /Fd"..\..\..\..\tsf4g_output\deps\expat\Debug_static/" /FD /GZ /c 
+"D:\trunk\deps\expat\lib\xmlparse.c"
+"D:\trunk\deps\expat\lib\xmlrole.c"
+"D:\trunk\deps\expat\lib\xmltok.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\mickeyxu\LOCALS~1\Temp\RSP8FA.tmp" 
+Creating command line "link.exe -lib /nologo /out:".\..\..\..\win32_lib\vc6\debug\libexpat_d.lib"  \tsf4g_output\deps\expat\Debug_static\xmlparse.obj \tsf4g_output\deps\expat\Debug_static\xmlrole.obj \tsf4g_output\deps\expat\Debug_static\xmltok.obj "
+<h3>Output Window</h3>
+Compiling...
+xmlparse.c
+xmlrole.c
+xmltok.c
+Generating Code...
+Creating library...
+
+
+
+<h3>Results</h3>
+libexpat_d.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

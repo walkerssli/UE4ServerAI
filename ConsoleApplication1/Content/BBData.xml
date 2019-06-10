@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK" standalone="yes" ?>
+<metalib tagsetversion="1" name="BlackBoard"  version="10">
+
+<include name="" file="BlackBoard.xml" />
+
+    <union name="BBDataBodyUnion" version="1" >
+        <entry name="ServerTest"               type="BB_ServerTest"                  id="0"/>
+        <entry name="MonsterNormal"               type="BT_Monster_Normal"              id="1"/>
+    </union>
+
+
+    <struct name="BBData" version="1" desc="登录系统上行包">
+        <entry name="Type"        type="int" defaultvalue="1"/>
+        <entry name="DataBody"       type="BBDataBodyUnion"  select="Type"/>
+    </struct>
+
+
+</metalib>

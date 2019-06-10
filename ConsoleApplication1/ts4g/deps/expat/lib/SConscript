@@ -1,0 +1,13 @@
+import os
+
+
+Import('buildenv')
+
+src_local = Glob('xmlparse.c')
+src_local += Glob('xmlrole.c')
+src_local += Glob('xmltok.c')
+buildenv.buildStaticLib('expat',src_local, CPPDEFINES=Split('COMPILED_FROM_DSP XML_STATIC _WINDOWS _LIB'),MODULE="base");
+#buildenv.buildSharedLib('expat',src_local, CPPDEFINES='COMPILED_FROM_DSP _WINDOWS _LIB' );
+
+Return('src_local')
+

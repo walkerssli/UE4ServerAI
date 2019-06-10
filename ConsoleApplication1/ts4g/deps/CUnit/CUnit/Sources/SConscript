@@ -1,0 +1,11 @@
+Import('buildenv')
+
+if buildenv._isWindows:
+	src_local=Glob('Automated/*.c')
+	src_local+=Glob('Basic/*.c')
+	src_local+=Glob('Console/*.c')
+	src_local+=Glob('Framework/*.c')
+	src_local+=Glob('Test/*.c')
+	src_local+=Glob('Win/*.c')
+	#print src_local
+	buildenv.buildStaticLib('cunit',src_local,CPPPATH=Split('../Headers'))

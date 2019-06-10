@@ -1,0 +1,28 @@
+import os
+Import('buildenv')
+
+zookeeper_include = Glob('zookeeper/include/*.h')
+
+if buildenv._isLinux:
+    if buildenv._is64:
+        Install('../lib','lib64/libscew.a')
+        Install('../lib','lib64/libexpat.a')
+        Install('../lib','lib64/libreadline.a')
+        Install('../lib','lib64/libncurses.a')
+        Install('../lib','zookeeper/lib64/libzookeeper_st.a')
+        Install('../lib','zookeeper/lib64/libzookeeper_mt.a')
+    else:
+        Install('../lib','lib/libscew.a')
+        Install('../lib','lib/libexpat.a')
+        Install('../lib','lib/libreadline.a')
+        Install('../lib','lib/libncurses.a')
+        Install('../lib','zookeeper/lib/libzookeeper_st.a')
+        Install('../lib','zookeeper/lib64/libzookeeper_mt.a')
+    Install('../include/thirdparty/zookeeper/',zookeeper_include)
+else:
+    libevent_include0 = Glob('libevent-2.1.8-stable/win64/include/*.h')
+    libevent_include1 = Glob('libevent-2.1.8-stable/win64/include/event2/*.h')
+    Install('../include/thirdparty/libevent-2.1.8-stable/', libevent_include0)
+    Install('../include/thirdparty/libevent-2.1.8-stable/event2/', libevent_include1)
+    
+    Install(buildenv.libInstallPath, Glob('libevent-2.1.8-stable/win64/lib/*.lib'))

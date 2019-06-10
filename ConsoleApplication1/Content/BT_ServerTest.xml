@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--   -->
+<!-- Copyright 2018-2019 Tencent Timi J5 Studio, Inc. All Rights Reserved. -->
+<!--   -->
+<!-- 2019/5/20 11:14 -->
+<!--   -->
+<BehaviorTree Name="BT_ServerTest" Blackboard="BB_ServerTest">
+	<Types>
+		<Enum Type="EBTBlackboardRestart">
+			<Value Int="0" Str="ValueChange" />
+			<Value Int="1" Str="ResultChange" />
+			<Value Int="2" Str="EBTBlackboardRestart_MAX" />
+		</Enum>
+		<Enum Type="EBTFlowAbortMode">
+			<Value Int="0" Str="None" />
+			<Value Int="1" Str="LowerPriority" />
+			<Value Int="2" Str="Self" />
+			<Value Int="3" Str="Both" />
+			<Value Int="4" Str="EBTFlowAbortMode_MAX" />
+		</Enum>
+		<Enum Type="EArithmeticKeyOperation">
+			<Value Int="0" Str="Equal" />
+			<Value Int="1" Str="NotEqual" />
+			<Value Int="2" Str="Less" />
+			<Value Int="3" Str="LessOrEqual" />
+			<Value Int="4" Str="Greater" />
+			<Value Int="5" Str="GreaterOrEqual" />
+			<Value Int="6" Str="EArithmeticKeyOperation_MAX" />
+		</Enum>
+	</Types>
+	<Tree>
+		<Decorators />
+		<DecoratorOps />
+		<Composite Type="BTComposite_Sequence" Name="Sequence" bApplyDecoratorScope="false">
+			<Services />
+			<Children>
+				<Child>
+					<Composite Type="BTComposite_Selector" Name="Selector1_0" bApplyDecoratorScope="false">
+						<Services />
+						<Children>
+							<Child>
+								<Task Type="BTTask_Talk" Name="Talk1_1" bIgnoreRestartSelf="false" TalkTime="100.0" Message="0">
+									<Services>
+										<Service Type="BTService_ServerIncrease_C" Name="Service1_1" Interval="1.0" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" IncreaseKey="TestKey1" TickFunc="1" />
+									</Services>
+								</Task>
+								<Decorators>
+									<Decorator Type="BTDecorator_Blackboard" Name="Decorator1_1" bInverseCondition="false" FlowAbortMode="EBTFlowAbortMode::Both" FlowAbortModeValue="3" BlackboardKey="TestKey1" OperationType="EArithmeticKeyOperation::Greater" OperationTypeValue="4" IntValue="0" FloatValue="0.0" StringValue="" NotifyObserver="EBTBlackboardRestart::ResultChange" NotifyObserverValue="1" Desc="TestKey1 Is Greater Than 0" />
+								</Decorators>
+								<DecoratorOps />
+							</Child>
+							<Child>
+								<Task Type="BTTask_Talk" Name="Talk1_2" bIgnoreRestartSelf="false" TalkTime="100.0" Message="1">
+									<Services>
+										<Service Type="BTService_ServerIncrease_C" Name="Service1_2" Interval="2.0" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" IncreaseKey="TestKey1" TickFunc="1" />
+									</Services>
+								</Task>
+								<Decorators>
+									<Decorator Type="BTDecorator_Blackboard" Name="Decorator1_2" bInverseCondition="false" FlowAbortMode="EBTFlowAbortMode::Both" FlowAbortModeValue="3" BlackboardKey="TestKey1" OperationType="EArithmeticKeyOperation::Greater" OperationTypeValue="4" IntValue="0" FloatValue="0.0" StringValue="" NotifyObserver="EBTBlackboardRestart::ResultChange" NotifyObserverValue="1" Desc="TestKey1 Is Greater Than 0" />
+								</Decorators>
+								<DecoratorOps />
+							</Child>
+							<Child>
+								<Task Type="BTTask_Talk" Name="Talk1_3" bIgnoreRestartSelf="false" TalkTime="100.0" Message="2">
+									<Services>
+										<Service Type="BTService_ServerIncrease_C" Name="Service1_3" Interval="3.0" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" IncreaseKey="TestKey1" TickFunc="1" />
+									</Services>
+								</Task>
+								<Decorators>
+									<Decorator Type="BTDecorator_Blackboard" Name="Decorator1_3" bInverseCondition="false" FlowAbortMode="EBTFlowAbortMode::LowerPriority" FlowAbortModeValue="1" BlackboardKey="TestKey1" OperationType="EArithmeticKeyOperation::Greater" OperationTypeValue="4" IntValue="0" FloatValue="0.0" StringValue="" NotifyObserver="EBTBlackboardRestart::ResultChange" NotifyObserverValue="1" Desc="TestKey1 Is Greater Than 0" />
+								</Decorators>
+								<DecoratorOps />
+							</Child>
+							<Child>
+								<Task Type="BTTask_Talk" Name="Talk1_4" bIgnoreRestartSelf="false" TalkTime="100.0" Message="1">
+									<Services>
+										<Service Type="BTService_ServerIncrease_C" Name="Service1_4" Interval="2.0" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" IncreaseKey="TestKey1" TickFunc="1" />
+									</Services>
+								</Task>
+								<Decorators>
+									<Decorator Type="BTDecorator_Blackboard" Name="Decorator1_4" bInverseCondition="false" FlowAbortMode="EBTFlowAbortMode::None" FlowAbortModeValue="0" BlackboardKey="TestKey1" OperationType="EArithmeticKeyOperation::Less" OperationTypeValue="2" IntValue="1" FloatValue="0.0" StringValue="" NotifyObserver="EBTBlackboardRestart::ResultChange" NotifyObserverValue="1" Desc="TestKey1 Is Less Than 1" />
+								</Decorators>
+								<DecoratorOps />
+							</Child>
+						</Children>
+					</Composite>
+					<Decorators />
+					<DecoratorOps />
+				</Child>
+			</Children>
+		</Composite>
+	</Tree>
+</BehaviorTree>

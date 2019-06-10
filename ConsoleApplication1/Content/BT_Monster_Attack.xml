@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--   -->
+<!-- Copyright 2018-2019 Tencent Timi J5 Studio, Inc. All Rights Reserved. -->
+<!--   -->
+<!-- 2019/6/4 13:40 -->
+<!--   -->
+<BehaviorTree Name="BT_Monster_Attack" Blackboard="BT_Monster_Normal">
+	<Types>
+		<Enum Type="EBTBlackboardRestart">
+			<Value Int="0" Str="ValueChange" />
+			<Value Int="1" Str="ResultChange" />
+			<Value Int="2" Str="EBTBlackboardRestart_MAX" />
+		</Enum>
+		<Enum Type="EBTFlowAbortMode">
+			<Value Int="0" Str="None" />
+			<Value Int="1" Str="LowerPriority" />
+			<Value Int="2" Str="Self" />
+			<Value Int="3" Str="Both" />
+			<Value Int="4" Str="EBTFlowAbortMode_MAX" />
+		</Enum>
+		<Enum Type="EBasicKeyOperation">
+			<Value Int="0" Str="Set" />
+			<Value Int="1" Str="NotSet" />
+			<Value Int="2" Str="EBasicKeyOperation_MAX" />
+		</Enum>
+		<Enum Type="EArithmeticKeyOperation">
+			<Value Int="0" Str="Equal" />
+			<Value Int="1" Str="NotEqual" />
+			<Value Int="2" Str="Less" />
+			<Value Int="3" Str="LessOrEqual" />
+			<Value Int="4" Str="Greater" />
+			<Value Int="5" Str="GreaterOrEqual" />
+			<Value Int="6" Str="EArithmeticKeyOperation_MAX" />
+		</Enum>
+	</Types>
+	<Tree>
+		<Decorators />
+		<DecoratorOps />
+		<Composite Type="BTComposite_Selector" Name="Selector" bApplyDecoratorScope="false">
+			<Services />
+			<Children>
+				<Child>
+					<Composite Type="BTComposite_Sequence" Name="Sequence" bApplyDecoratorScope="false">
+						<Services />
+						<Children>
+							<Child>
+								<Task Type="BTTask_MoveToHome_C" Name="Move To Home" bIgnoreRestartSelf="false" TickFunc="1" ExecuteFunc="1">
+									<Services />
+								</Task>
+								<Decorators />
+								<DecoratorOps />
+							</Child>
+						</Children>
+					</Composite>
+					<Decorators>
+						<Decorator Type="BTDecorator_Blackboard" Name="是否需要回家" bInverseCondition="false" FlowAbortMode="EBTFlowAbortMode::LowerPriority" FlowAbortModeValue="1" BlackboardKey="NeedGoHome" OperationType="EBasicKeyOperation::Set" OperationTypeValue="0" IntValue="1" FloatValue="0.0" StringValue="" NotifyObserver="EBTBlackboardRestart::ResultChange" NotifyObserverValue="1" Desc="NeedGoHome is Is Set" />
+					</Decorators>
+					<DecoratorOps />
+				</Child>
+				<Child>
+					<Composite Type="BTComposite_Sequence" Name="Sequence" bApplyDecoratorScope="false">
+						<Services />
+						<Children>
+							<Child>
+								<Task Type="BTTask_MoveToTarget_C" Name="Move To Target" bIgnoreRestartSelf="false" BlackboardKey="TargetActor" TickFunc="1" ExecuteFunc="1">
+									<Services>
+										<Service Type="BTService_OutOfActiveRangeSettingHome_C" Name="超出活动范围设置回家" Interval="0.5" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" BlackboardKey="NeedGoHome" TickFunc="1" />
+										<Service Type="BTService_OutOfTraceRangeSettingHome_C" Name="超出追击范围设置回家" Interval="0.5" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" BlackboardKey="NeedGoHome" TickFunc="1" />
+										<Service Type="BTService_AssessAndAdjustTarget_C" Name="评估并调整目标" Interval="0.5" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" BlackboardKey="TargetActor" BlackboardKey2="NeedGoHome" TickFunc="1" />
+									</Services>
+								</Task>
+								<Decorators />
+								<DecoratorOps />
+							</Child>
+							<Child>
+								<Task Type="BTTask_AttackTarget_C" Name="Attack Target" bIgnoreRestartSelf="false" BlackboardKey="TargetActor" TickFunc="1" ExecuteFunc="1" AbortFunc="1">
+									<Services />
+								</Task>
+								<Decorators />
+								<DecoratorOps />
+							</Child>
+						</Children>
+					</Composite>
+					<Decorators>
+						<Decorator Type="BTDecorator_Blackboard" Name="是否存在目标" bInverseCondition="false" FlowAbortMode="EBTFlowAbortMode::Both" FlowAbortModeValue="3" BlackboardKey="TargetActor" OperationType="EArithmeticKeyOperation::Greater" OperationTypeValue="4" IntValue="0" FloatValue="0.0" StringValue="" NotifyObserver="EBTBlackboardRestart::ValueChange" NotifyObserverValue="0" Desc="TargetActor Is Greater Than 0" />
+					</Decorators>
+					<DecoratorOps />
+				</Child>
+				<Child>
+					<Composite Type="BTComposite_Sequence" Name="Sequence" bApplyDecoratorScope="false">
+						<Services>
+							<Service Type="BTService_SearchTarget_C" Name="搜敌" Interval="0.5" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" BlackboardKey="TargetActor" TickFunc="1" />
+						</Services>
+						<Children>
+							<Child>
+								<Task Type="BTTask_MoveToPatrol_C" Name="Move To Patrol" bIgnoreRestartSelf="false" BlackboardKey="StandTime" TickFunc="1" ExecuteFunc="1">
+									<Services>
+										<Service Type="BTService_OutOfActiveRangeSettingHome_C" Name="超出活动范围设置回家" Interval="0.5" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" BlackboardKey="NeedGoHome" TickFunc="1" />
+									</Services>
+								</Task>
+								<Decorators />
+								<DecoratorOps />
+							</Child>
+							<Child>
+								<Task Type="BTTask_WaitBlackboardTime" Name="Wait Blackboard Time" bIgnoreRestartSelf="false" WaitTime="5.0" RandomDeviation="0.0" BlackboardKey="StandTime">
+									<Services />
+								</Task>
+								<Decorators />
+								<DecoratorOps />
+							</Child>
+						</Children>
+					</Composite>
+					<Decorators>
+						<Decorator Type="BTDecorator_Blackboard" Name="是否需要巡逻" bInverseCondition="false" FlowAbortMode="EBTFlowAbortMode::LowerPriority" FlowAbortModeValue="1" BlackboardKey="PatrolType" OperationType="EArithmeticKeyOperation::Greater" OperationTypeValue="4" IntValue="0" FloatValue="0.0" StringValue="" NotifyObserver="EBTBlackboardRestart::ValueChange" NotifyObserverValue="0" Desc="PatrolType Is Greater Than 0" />
+					</Decorators>
+					<DecoratorOps />
+				</Child>
+				<Child>
+					<Composite Type="BTComposite_Sequence" Name="Sequence" bApplyDecoratorScope="false">
+						<Services>
+							<Service Type="BTService_SearchTarget_C" Name="搜敌" Interval="0.5" RandomDeviation="0.1" bCallTickOnSearchStart="false" bRestartTimerOnEachActivation="false" BlackboardKey="TargetActor" TickFunc="1" />
+						</Services>
+						<Children>
+							<Child>
+								<Task Type="BTTask_WaitBlackboardTime" Name="Wait Blackboard Time" bIgnoreRestartSelf="false" WaitTime="5.0" RandomDeviation="0.0" BlackboardKey="StandTime">
+									<Services />
+								</Task>
+								<Decorators />
+								<DecoratorOps />
+							</Child>
+						</Children>
+					</Composite>
+					<Decorators />
+					<DecoratorOps />
+				</Child>
+			</Children>
+		</Composite>
+	</Tree>
+</BehaviorTree>

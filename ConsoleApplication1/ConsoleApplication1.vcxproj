@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9F4EDBDE-18F0-468D-87F7-7AABAEAFF1A1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)Core;$(ProjectDir)BehaviorTree\Blackboard\tsf4g_win\win64vc14MT\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);./</IncludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)Core;$(ProjectDir)ts4g\include;$(ProjectDir)ts4g\deps\scew\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);./</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(ProjectDir)Core;$(ProjectDir)BehaviorTree\Blackboard\tsf4g_win\win64vc14MT\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);./</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)Core;$(ProjectDir)ts4g\include;$(ProjectDir)ts4g\deps\scew\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);./</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libtsf4g.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;ENABLE_UE_LOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libtsf4g.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)ts4g/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libtsf4g.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)ts4g/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libtsf4g.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BehaviorTree\Agents\UE4ActorAgent.h" />
+    <ClInclude Include="BehaviorTree\AIMessageTypes.h" />
+    <ClInclude Include="BehaviorTree\BehaviorTree.h" />
+    <ClInclude Include="BehaviorTree\BehaviorTreeComponent.h" />
+    <ClInclude Include="BehaviorTree\BehaviorTreeManager.h" />
+    <ClInclude Include="BehaviorTree\BehaviorTreeParseHelper.h" />
+    <ClInclude Include="BehaviorTree\BehaviorTreeTypes.h" />
+    <ClInclude Include="BehaviorTree\BlackboardComponent.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\BBData.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\BlackBoard.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\BlackboardKeyType.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\BlackBoard_metalib.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\TdrBuf.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\TdrBufUtil.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\TdrError.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\TdrPal.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\TdrReflection.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\TdrReflectionErr.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\TdrTime.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\TdrTLV.h" />
+    <ClInclude Include="BehaviorTree\Blackboard\TdrTypeUtil.h" />
+    <ClInclude Include="BehaviorTree\BTAuxiliaryNode.h" />
+    <ClInclude Include="BehaviorTree\BTCompositeNode.h" />
+    <ClInclude Include="BehaviorTree\BTDecorator.h" />
+    <ClInclude Include="BehaviorTree\BTNode.h" />
+    <ClInclude Include="BehaviorTree\BTService.h" />
+    <ClInclude Include="BehaviorTree\BTTaskNode.h" />
+    <ClInclude Include="BehaviorTree\Composites\BTComposite_Selector.h" />
+    <ClInclude Include="BehaviorTree\Composites\BTComposite_Sequence.h" />
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_Blackboard.h" />
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_BlackboardBase.h" />
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_ConditionalLoop.h" />
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_Cooldown.h" />
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_Loop.h" />
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_TimeLimit.h" />
+    <ClInclude Include="BehaviorTree\Services\BTService_AccessAndExitFlee.h" />
+    <ClInclude Include="BehaviorTree\Services\BTService_AccessAndFlee.h" />
+    <ClInclude Include="BehaviorTree\Services\BTService_AssessAndAdjustTarget.h" />
+    <ClInclude Include="BehaviorTree\Services\BTService_OutOfActiveRangeSettingHome.h" />
+    <ClInclude Include="BehaviorTree\Services\BTService_OutOfTraceRangeSettingHome.h" />
+    <ClInclude Include="BehaviorTree\Services\BTService_SearchTarget.h" />
+    <ClInclude Include="BehaviorTree\Services\BTService_ServerIncrease.h" />
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_AttackTarget.h" />
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_MoveToFlee.h" />
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_MoveToHome.h" />
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_MoveToPatrol.h" />
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_MoveToTarget.h" />
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_ServerSetIntBB.h" />
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_Talk.h" />
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_Wait.h" />
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_WaitBlackboardTime.h" />
+    <ClInclude Include="Core\CoreTypes.h" />
+    <ClInclude Include="Core\MyDelegate.h" />
+    <ClInclude Include="Core\NumericLimits.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\attribute.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\element.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\error.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\expat.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\expat_external.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\parser.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\scew.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\str.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\tree.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\types.h" />
+    <ClInclude Include="ts4g\deps\Scew\include\writer.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\attribute.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\element.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\error.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\parser.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\scew.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\str.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\tree.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\types.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\writer.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\xattribute.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\xelement.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\xerror.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\xhandler.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\xparser.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\xprint.h" />
+    <ClInclude Include="ts4g\deps\scew\scew\xtree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BehaviorTree\Agents\UE4ActorAgent.cpp" />
+    <ClCompile Include="BehaviorTree\AIMessageTypes.cpp" />
+    <ClCompile Include="BehaviorTree\BehaviorTree.cpp" />
+    <ClCompile Include="BehaviorTree\BehaviorTreeComponent.cpp" />
+    <ClCompile Include="BehaviorTree\BehaviorTreeManager.cpp" />
+    <ClCompile Include="BehaviorTree\BehaviorTreeTypes.cpp" />
+    <ClCompile Include="BehaviorTree\BlackboardComponent.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\BBData.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\BlackBoard.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\TdrBuf.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\TdrBufUtil.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\TdrError.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\TdrPal.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\TdrReflection.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\TdrThirdParty.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\TdrTime.cpp" />
+    <ClCompile Include="BehaviorTree\Blackboard\TdrTypeUtil.cpp" />
+    <ClCompile Include="BehaviorTree\BTAuxiliaryNode.cpp" />
+    <ClCompile Include="BehaviorTree\BTCompositeNode.cpp" />
+    <ClCompile Include="BehaviorTree\BTDecorator.cpp" />
+    <ClCompile Include="BehaviorTree\BTNode.cpp" />
+    <ClCompile Include="BehaviorTree\BTService.cpp" />
+    <ClCompile Include="BehaviorTree\BTTaskNode.cpp" />
+    <ClCompile Include="BehaviorTree\Composites\BTComposite_Selector.cpp" />
+    <ClCompile Include="BehaviorTree\Composites\BTComposite_Sequence.cpp" />
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_Blackboard.cpp" />
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_BlackboardBase.cpp" />
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_ConditionalLoop.cpp" />
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_Cooldown.cpp" />
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_Loop.cpp" />
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_TimeLimit.cpp" />
+    <ClCompile Include="BehaviorTree\Services\BTService_AccessAndExitFlee.cpp" />
+    <ClCompile Include="BehaviorTree\Services\BTService_AccessAndFlee.cpp" />
+    <ClCompile Include="BehaviorTree\Services\BTService_AssessAndAdjustTarget.cpp" />
+    <ClCompile Include="BehaviorTree\Services\BTService_OutOfActiveRangeSettingHome.cpp" />
+    <ClCompile Include="BehaviorTree\Services\BTService_OutOfTraceRangeSettingHome.cpp" />
+    <ClCompile Include="BehaviorTree\Services\BTService_SearchTarget.cpp" />
+    <ClCompile Include="BehaviorTree\Services\BTService_ServerIncrease.cpp" />
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_AttackTarget.cpp" />
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_MoveToFlee.cpp" />
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_MoveToHome.cpp" />
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_MoveToPatrol.cpp" />
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_MoveToTarget.cpp" />
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_ServerSetIntBB.cpp" />
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_Talk.cpp" />
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_Wait.cpp" />
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_WaitBlackboardTime.cpp" />
+    <ClCompile Include="ConsoleApplication1.cpp" />
+    <ClCompile Include="Core\MyDelegate.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

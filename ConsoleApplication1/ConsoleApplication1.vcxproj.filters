@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="BehaviorTree">
+      <UniqueIdentifier>{5aa0b495-56aa-4705-ba20-ef78ce15b0ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{d7b34b46-bc38-4a14-bf06-e4e5912c7ae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BehaviorTree\Blackboard">
+      <UniqueIdentifier>{a47850fa-5582-482d-b5d1-acb8daeaf9f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BehaviorTree\Blackboard\tsf4g_win">
+      <UniqueIdentifier>{53471a41-f66c-4677-9055-0714a5a32ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ts4g">
+      <UniqueIdentifier>{487ceb37-ba9a-401d-9988-b97361ca92c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BehaviorTree\Composites">
+      <UniqueIdentifier>{dd3972b7-d407-4fdf-915c-fd99b065c581}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BehaviorTree\Tasks">
+      <UniqueIdentifier>{86244060-d392-4457-b573-87f8ff16c94f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BehaviorTree\Decorators">
+      <UniqueIdentifier>{ac9cebe4-e736-41ff-926c-4c448ddd5504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BehaviorTree\Services">
+      <UniqueIdentifier>{8bf97b10-069a-463d-bc02-1999fcff76ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BehaviorTree\Agents">
+      <UniqueIdentifier>{4151c84d-6f87-48df-a602-fc7113c00a9d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BehaviorTreeTypes.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\NumericLimits.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BTAuxiliaryNode.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BTCompositeNode.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BTDecorator.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BTNode.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BTService.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BTTaskNode.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BehaviorTree.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BehaviorTreeComponent.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BehaviorTreeManager.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BlackboardComponent.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\MyDelegate.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\BlackBoard.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\BlackBoard_metalib.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\TdrBuf.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\TdrBufUtil.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\TdrError.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\TdrPal.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\TdrTime.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\TdrTLV.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\TdrTypeUtil.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\TdrReflection.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\TdrReflectionErr.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\CoreTypes.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\attribute.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\element.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\parser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\scew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\str.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\writer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\xattribute.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\xelement.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\xerror.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\xhandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\xparser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\xprint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\scew\scew\xtree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\attribute.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\element.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\error.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\expat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\expat_external.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\parser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\scew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\str.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\types.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ts4g\deps\Scew\include\writer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Composites\BTComposite_Selector.h">
+      <Filter>BehaviorTree\Composites</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Composites\BTComposite_Sequence.h">
+      <Filter>BehaviorTree\Composites</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_Wait.h">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_Blackboard.h">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_BlackboardBase.h">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\BlackboardKeyType.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_Talk.h">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Services\BTService_ServerIncrease.h">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\BehaviorTreeParseHelper.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_ServerSetIntBB.h">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\AIMessageTypes.h">
+      <Filter>BehaviorTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Blackboard\BBData.h">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Services\BTService_AccessAndExitFlee.h">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_MoveToHome.h">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Agents\UE4ActorAgent.h">
+      <Filter>BehaviorTree\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Services\BTService_SearchTarget.h">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Services\BTService_AssessAndAdjustTarget.h">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Services\BTService_OutOfActiveRangeSettingHome.h">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Services\BTService_OutOfTraceRangeSettingHome.h">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_WaitBlackboardTime.h">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_AttackTarget.h">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_MoveToFlee.h">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_MoveToPatrol.h">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Tasks\BTTask_MoveToTarget.h">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Services\BTService_AccessAndFlee.h">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClInclude>    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_TimeLimit.h">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_Loop.h">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_Cooldown.h">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_ConditionalLoop.h">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleApplication1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BehaviorTreeTypes.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BTAuxiliaryNode.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BTCompositeNode.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BTDecorator.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BTNode.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BTService.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BTTaskNode.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BehaviorTree.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BehaviorTreeComponent.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BehaviorTreeManager.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BlackboardComponent.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\BlackBoard.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\TdrBuf.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\TdrBufUtil.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\TdrError.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\TdrPal.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\TdrThirdParty.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\TdrTime.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\TdrTypeUtil.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\TdrReflection.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\MyDelegate.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Composites\BTComposite_Selector.cpp">
+      <Filter>BehaviorTree\Composites</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Composites\BTComposite_Sequence.cpp">
+      <Filter>BehaviorTree\Composites</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_Wait.cpp">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_Blackboard.cpp">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_BlackboardBase.cpp">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_Talk.cpp">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Services\BTService_ServerIncrease.cpp">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_ServerSetIntBB.cpp">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\AIMessageTypes.cpp">
+      <Filter>BehaviorTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Blackboard\BBData.cpp">
+      <Filter>BehaviorTree\Blackboard</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Services\BTService_AccessAndExitFlee.cpp">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_MoveToHome.cpp">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Agents\UE4ActorAgent.cpp">
+      <Filter>BehaviorTree\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Services\BTService_AssessAndAdjustTarget.cpp">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Services\BTService_OutOfActiveRangeSettingHome.cpp">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Services\BTService_OutOfTraceRangeSettingHome.cpp">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Services\BTService_SearchTarget.cpp">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_AttackTarget.cpp">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_MoveToFlee.cpp">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_MoveToPatrol.cpp">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_MoveToTarget.cpp">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Tasks\BTTask_WaitBlackboardTime.cpp">
+      <Filter>BehaviorTree\Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Services\BTService_AccessAndFlee.cpp">
+      <Filter>BehaviorTree\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_TimeLimit.cpp">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_Loop.cpp">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_Cooldown.cpp">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\Decorators\BTDecorator_ConditionalLoop.cpp">
+      <Filter>BehaviorTree\Decorators</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

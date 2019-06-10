@@ -1,0 +1,2 @@
+python ExportServerNodes.py
+pause

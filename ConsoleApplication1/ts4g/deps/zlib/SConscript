@@ -1,0 +1,7 @@
+import os
+
+Import('buildenv')
+src_local = Glob('*.c')
+buildenv.buildStaticLib('zlib',src_local,MODULE="base");
+
+Return('src_local')
