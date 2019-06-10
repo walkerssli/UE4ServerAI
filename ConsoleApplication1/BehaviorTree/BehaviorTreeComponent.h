@@ -27,7 +27,6 @@ class UBlackboardComponent;
 class UBehaviorTreeComponent;
 struct FAIMessage;
 struct FAIRequestID;
-class UE4ActorAgent;
 
 
 DECLARE_DELEGATE_TwoParams(FOnAIMessage, UBehaviorTreeComponent*, const FAIMessage&);
@@ -103,7 +102,9 @@ public:
 	virtual ~UBehaviorTreeComponent();
 	//GENERATED_UCLASS_BODY()
 
-	UE4ActorAgent* GetAgent();
+	void* GetBTManager();
+
+	int InitBTManager(void* pBTManager);
 
 	// Begin UBrainComponents
 	virtual void RestartLogic() ;
@@ -279,6 +280,8 @@ public:
 // #endif
 
 protected:
+	void* m_pBTManager;
+
 	FString m_bbName;
 
 	UBlackboardComponent* BlackboardComp;
@@ -287,8 +290,6 @@ protected:
 
 	float mDeltaSeconds;
 	inline float GetDeltaSeconds() const { return mDeltaSeconds; }
-
-	UE4ActorAgent* m_pUE4ActorAgent;
 
 	UBehaviorTree* m_pBehaviorTree;
 

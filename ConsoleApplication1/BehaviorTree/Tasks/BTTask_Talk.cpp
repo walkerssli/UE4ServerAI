@@ -1,5 +1,11 @@
 #include "BehaviorTree/Tasks/BTTask_Talk.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTTask_Talk, UBTTask_Talk_Factory, TaskNodeFactoryBase)
+ADD_ATTRIBUTE(Float, TalkTime)
+ADD_ATTRIBUTE(Str, Message)
+END_DERIVED_NODE_FACTORY(UBTTask_Talk, UBTTask_Talk_Factory)
 
 UBTTask_Talk::UBTTask_Talk() : UBTTaskNode()
 {

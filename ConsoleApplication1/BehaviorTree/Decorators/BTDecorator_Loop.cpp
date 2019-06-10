@@ -3,6 +3,13 @@
 #include "BehaviorTree/Decorators/BTDecorator_Loop.h"
 #include "BehaviorTree/BTCompositeNode.h"
 //#include "BehaviorTree/Composites/BTComposite_SimpleParallel.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTDecorator_Loop, UBTDecorator_Loop_Factory, DecoratorNodeFactoryBase)
+ADD_ATTRIBUTE(Int, NumLoops)
+ADD_ATTRIBUTE(Bool, bInfiniteLoop)
+ADD_ATTRIBUTE(Float, InfiniteLoopTimeoutTime)
+END_DERIVED_NODE_FACTORY(UBTDecorator_Loop, UBTDecorator_Loop_Factory)
 
 UBTDecorator_Loop::UBTDecorator_Loop() : UBTDecorator()
 {
@@ -10,7 +17,7 @@ UBTDecorator_Loop::UBTDecorator_Loop() : UBTDecorator()
 	NumLoops = 3;
 	InfiniteLoopTimeoutTime = -1.f;
 	bNotifyActivation = true;
-	
+
 	bAllowAbortNone = false;
 	bAllowAbortLowerPri = false;
 	bAllowAbortChildNodes = false;
@@ -27,7 +34,7 @@ void UBTDecorator_Loop::OnNodeActivation(FBehaviorTreeSearchData& SearchData)
 	const bool bIsSpecialNode = false;
 
 	if ((bIsSpecialNode && parent->CurrentChild == BTSpecialChild::NotInitialized) ||
-		(!bIsSpecialNode && parent->CurrentChild != ChildIndex))
+	        (!bIsSpecialNode && parent->CurrentChild != ChildIndex))
 	{
 		// initialize counter if it's first activation
 		RemainingExecutions = NumLoops;

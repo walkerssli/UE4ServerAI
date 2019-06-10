@@ -1,6 +1,11 @@
 // Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 
 #include "BehaviorTree/Decorators/BTDecorator_TimeLimit.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTDecorator_TimeLimit, UBTDecorator_TimeLimit_Factory, DecoratorNodeFactoryBase)
+ADD_ATTRIBUTE(Float, TimeLimit)
+END_DERIVED_NODE_FACTORY(UBTDecorator_TimeLimit, UBTDecorator_TimeLimit_Factory)
 
 UBTDecorator_TimeLimit::UBTDecorator_TimeLimit() : UBTDecorator()
 {

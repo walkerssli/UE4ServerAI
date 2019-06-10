@@ -163,7 +163,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BehaviorTree\Agents\UE4ActorAgent.h" />
     <ClInclude Include="BehaviorTree\AIMessageTypes.h" />
     <ClInclude Include="BehaviorTree\BehaviorTree.h" />
     <ClInclude Include="BehaviorTree\BehaviorTreeComponent.h" />
@@ -248,11 +247,11 @@
     <ClInclude Include="ts4g\deps\scew\scew\xtree.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BehaviorTree\Agents\UE4ActorAgent.cpp" />
     <ClCompile Include="BehaviorTree\AIMessageTypes.cpp" />
     <ClCompile Include="BehaviorTree\BehaviorTree.cpp" />
     <ClCompile Include="BehaviorTree\BehaviorTreeComponent.cpp" />
     <ClCompile Include="BehaviorTree\BehaviorTreeManager.cpp" />
+    <ClCompile Include="BehaviorTree\BehaviorTreeParseHelper.cpp" />
     <ClCompile Include="BehaviorTree\BehaviorTreeTypes.cpp" />
     <ClCompile Include="BehaviorTree\BlackboardComponent.cpp" />
     <ClCompile Include="BehaviorTree\Blackboard\BBData.cpp" />

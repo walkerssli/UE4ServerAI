@@ -1,127 +1,212 @@
-﻿  UE4ActorAgent.cpp
+﻿  BTAuxiliaryNode.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTCompositeNode.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\btcompositenode.cpp(198): warning C4267: “初始化”: 从“size_t”转换到“int32”，可能丢失数据
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\btcompositenode.cpp(625): warning C4267: “初始化”: 从“size_t”转换到“int32”，可能丢失数据
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\btcompositenode.cpp(625): warning C4267: “初始化”: 从“size_t”转换到“const int32”，可能丢失数据
+  BTDecorator.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTNode.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTService.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTTaskNode.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BehaviorTree.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
   BehaviorTreeComponent.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflection.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\ts4g\include\pal\pal.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.cpp(1075): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.cpp(2098): warning C4267: “=”: 从“size_t”转换到“int32”，可能丢失数据
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.cpp(1078): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.cpp(2101): warning C4267: “=”: 从“size_t”转换到“int32”，可能丢失数据
   BehaviorTreeManager.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflection.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\ts4g\include\pal\pal.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  BehaviorTreeTypes.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  BehaviorTreeParseHelper.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BehaviorTreeTypes.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.cpp(95): warning C4267: “初始化”: 从“size_t”转换到“int32”，可能丢失数据
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.cpp(95): warning C4267: “初始化”: 从“size_t”转换到“const int32”，可能丢失数据
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.cpp(182): warning C4267: “初始化”: 从“size_t”转换到“int32”，可能丢失数据
-  BTService_AccessAndExitFlee.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  BTComposite_Selector.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTComposite_Sequence.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTDecorator_Blackboard.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflection.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\ts4g\include\pal\pal.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflectionerr.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  BTDecorator_BlackboardBase.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTDecorator_ConditionalLoop.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTDecorator_Cooldown.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTDecorator_Loop.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTDecorator_TimeLimit.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTService_AccessAndExitFlee.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflectionerr.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  正在生成代码...
+  正在编译...
   BTService_AccessAndFlee.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflectionerr.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   BTService_AssessAndAdjustTarget.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflectionerr.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   BTService_OutOfActiveRangeSettingHome.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflectionerr.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   BTService_OutOfTraceRangeSettingHome.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflectionerr.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   BTService_SearchTarget.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflectionerr.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  BTService_ServerIncrease.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
 g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflectionerr.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   BTTask_AttackTarget.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
   BTTask_MoveToFlee.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
   BTTask_MoveToHome.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
   BTTask_MoveToPatrol.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
   BTTask_MoveToTarget.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTTask_ServerSetIntBB.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTTask_Talk.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  BTTask_Wait.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
   BTTask_WaitBlackboardTime.cpp
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(452): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
-g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
   g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+  ConsoleApplication1.cpp
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(453): warning C4099: “FBehaviorTreeInstance”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreetypes.h(567): note: 参见“FBehaviorTreeInstance”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(454): warning C4099: “FScopedBehaviorTreeLock”: 类型名称以前使用“struct”现在使用的是“class”
+  g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\behaviortreecomponent.h(25): note: 参见“FScopedBehaviorTreeLock”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrreflection.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\ts4g\include\pal\pal.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\bbdata.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\behaviortree\blackboard\tdrbuf.h(167): warning C4996: '_vsnprintf': This function or variable may be unsafe. Consider using _vsnprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1400): note: 参见“_vsnprintf”的声明
+g:\bns_client_proj\bns\tools\aimodule\consoleapplication1\consoleapplication1.cpp(48): warning C4305: “参数”: 从“double”到“float”截断
   正在生成代码...
-LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
-BehaviorTreeManager.obj : warning LNK4217: 本地定义的符号 XML_SetUnknownEncodingHandler 在函数 "public: class UBehaviorTree * __cdecl UBehaviorTreeManager::LoadTree(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class UBTCompositeNode * &,unsigned short &)" (?LoadTree@UBehaviorTreeManager@@QEAAPEAVUBehaviorTree@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAPEAVUBTCompositeNode@@AEAG@Z) 中导入
-BehaviorTreeManager.obj : warning LNK4217: 本地定义的符号 XML_SetEncoding 在函数 "public: class UBehaviorTree * __cdecl UBehaviorTreeManager::LoadTree(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class UBTCompositeNode * &,unsigned short &)" (?LoadTree@UBehaviorTreeManager@@QEAAPEAVUBehaviorTree@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEAPEAVUBTCompositeNode@@AEAG@Z) 中导入
-libtsf4g.lib(tsf4gtdr_auxtools.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_auxtools.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_ctypes_info.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_ctypes_info.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_error.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_error.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_error_detail.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_error_detail.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_error_i.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_error_i.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_iostream_i.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_iostream_i.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_metalib_init.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_metalib_init.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_metalib_manage_i.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_metalib_manage_i.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_os.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_os.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_strptime.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_strptime.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_XMLMetaLib.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_XMLMetaLib.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_check_xml_format.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_check_xml_format.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_metalib_entry_manage_i.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_metalib_entry_manage_i.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_metalib_meta_manage_i.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_metalib_meta_manage_i.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_metalib_param_i.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_metalib_param_i.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libtsf4g.lib(tsf4gtdr_scew_if.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libtsf4g.lib(tsf4gtdr_scew_if.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(attribute.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(attribute.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(element.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(element.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(error.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(error.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(parser.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(parser.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(str.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(str.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(tree.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(tree.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(writer.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(writer.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(xattribute.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(xattribute.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(xerror.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(xerror.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(xhandler.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(xhandler.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(xparser.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(xparser.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libscew_d.lib(xprint.obj) : warning LNK4099: 未找到 PDB“libvc14tsf4g.pdb”(使用“libscew_d.lib(xprint.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14tsf4g.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libexpat_d.lib(xmlparse.obj) : warning LNK4099: 未找到 PDB“libvc14expat.pdb”(使用“libexpat_d.lib(xmlparse.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14expat.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libexpat_d.lib(xmlrole.obj) : warning LNK4099: 未找到 PDB“libvc14expat.pdb”(使用“libexpat_d.lib(xmlrole.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14expat.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-libexpat_d.lib(xmltok.obj) : warning LNK4099: 未找到 PDB“libvc14expat.pdb”(使用“libexpat_d.lib(xmltok.obj)”或在“G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\libvc14expat.pdb”中寻找)；正在链接对象，如同没有调试信息一样
   ConsoleApplication1.vcxproj -> G:\BnS_Client_proj\BnS\Tools\AIModule\x64\Debug\ConsoleApplication1.exe

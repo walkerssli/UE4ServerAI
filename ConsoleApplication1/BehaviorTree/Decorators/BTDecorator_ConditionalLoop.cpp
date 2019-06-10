@@ -2,6 +2,10 @@
 
 #include "BehaviorTree/Decorators/BTDecorator_ConditionalLoop.h"
 #include "BehaviorTree/BTCompositeNode.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTDecorator_ConditionalLoop, UBTDecorator_ConditionalLoop_Factory, DecoratorNodeFactoryBase)
+END_DERIVED_NODE_FACTORY(UBTDecorator_ConditionalLoop, UBTDecorator_ConditionalLoop_Factory)
 
 UBTDecorator_ConditionalLoop::UBTDecorator_ConditionalLoop() : UBTDecorator_Blackboard()
 {

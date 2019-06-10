@@ -40,9 +40,6 @@
     <Filter Include="BehaviorTree\Services">
       <UniqueIdentifier>{8bf97b10-069a-463d-bc02-1999fcff76ae}</UniqueIdentifier>
     </Filter>
-    <Filter Include="BehaviorTree\Agents">
-      <UniqueIdentifier>{4151c84d-6f87-48df-a602-fc7113c00a9d}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -252,9 +249,6 @@
     <ClInclude Include="BehaviorTree\Tasks\BTTask_MoveToHome.h">
       <Filter>BehaviorTree\Tasks</Filter>
     </ClInclude>
-    <ClInclude Include="BehaviorTree\Agents\UE4ActorAgent.h">
-      <Filter>BehaviorTree\Agents</Filter>
-    </ClInclude>
     <ClInclude Include="BehaviorTree\Services\BTService_SearchTarget.h">
       <Filter>BehaviorTree\Services</Filter>
     </ClInclude>
@@ -284,7 +278,8 @@
     </ClInclude>
     <ClInclude Include="BehaviorTree\Services\BTService_AccessAndFlee.h">
       <Filter>BehaviorTree\Services</Filter>
-    </ClInclude>    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_TimeLimit.h">
+    </ClInclude>
+    <ClInclude Include="BehaviorTree\Decorators\BTDecorator_TimeLimit.h">
       <Filter>BehaviorTree\Decorators</Filter>
     </ClInclude>
     <ClInclude Include="BehaviorTree\Decorators\BTDecorator_Loop.h">
@@ -403,9 +398,6 @@
     <ClCompile Include="BehaviorTree\Tasks\BTTask_MoveToHome.cpp">
       <Filter>BehaviorTree\Tasks</Filter>
     </ClCompile>
-    <ClCompile Include="BehaviorTree\Agents\UE4ActorAgent.cpp">
-      <Filter>BehaviorTree\Agents</Filter>
-    </ClCompile>
     <ClCompile Include="BehaviorTree\Services\BTService_AssessAndAdjustTarget.cpp">
       <Filter>BehaviorTree\Services</Filter>
     </ClCompile>
@@ -447,6 +439,9 @@
     </ClCompile>
     <ClCompile Include="BehaviorTree\Decorators\BTDecorator_ConditionalLoop.cpp">
       <Filter>BehaviorTree\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree\BehaviorTreeParseHelper.cpp">
+      <Filter>BehaviorTree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

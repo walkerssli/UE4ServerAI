@@ -10,6 +10,16 @@
 #include "BehaviorTree/Blackboard/TdrReflection.h"
 #include "BehaviorTree/Blackboard/BlackboardKeyType.h"
 #include "BehaviorTree/Blackboard/TdrReflectionErr.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTDecorator_Blackboard, UBTDecorator_Blackboard_Factory, DecoratorNodeFactoryBase)
+ADD_ATTRIBUTE(Str, BlackboardKey)
+ADD_ATTRIBUTE(Int, IntValue)
+ADD_ATTRIBUTE(Float, FloatValue)
+ADD_ATTRIBUTE(Str, StringValue)
+ADD_ATTRIBUTE_WITH_CFGNAME(Int, OperationType, "OperationTypeValue")
+ADD_ATTRIBUTE_FORCECAST(Int, NotifyObserver, "NotifyObserverValue", EBTBlackboardRestart::Type)
+END_DERIVED_NODE_FACTORY(UBTDecorator_Blackboard, UBTDecorator_Blackboard_Factory)
 
 UBTDecorator_Blackboard::UBTDecorator_Blackboard() : UBTDecorator_BlackboardBase()
 {

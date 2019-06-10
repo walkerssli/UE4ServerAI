@@ -34,50 +34,8 @@ UBehaviorTreeManager::UBehaviorTreeManager()
 {
 	MaxDebuggerSteps = 100;
 
-	//Composite
-	NodeFactories["BTComposite_Selector"] = new UBTComposite_Selector_Factory();
-	NodeFactories["BTComposite_Sequence"] = new UBTComposite_Sequence_Factory();
+	NodeFactories = NodeFactoryBase::GetNodeFactoryMap();
 
-	//Decorator
-	NodeFactories["BTDecorator_Blackboard"] = new UBTDecorator_Blackboard_Factory();
-	NodeFactories["BTDecorator_Loop"] = new UBTDecorator_Loop_Factory();
-	NodeFactories["BTDecorator_TimeLimit"] = new UBTDecorator_TimeLimit_Factory();
-	NodeFactories["BTDecorator_Cooldown"] = new UBTDecorator_Cooldown_Factory();
-	NodeFactories["BTDecorator_ConditionalLoop"] = new UBTDecorator_ConditionalLoop_Factory();
-
-	//Service
-	NodeFactories["BTService_ServerIncrease"] = new UBTService_ServerIncrease_Factory();
-	/***********************python_auto_add_service_node_factory_no_delete_begin***********************/
-    NodeFactories["BTService_AccessAndExitFlee"] = new UBTService_AccessAndExitFlee_Factory();
-    
-    NodeFactories["BTService_AssessAndAdjustTarget"] = new UBTService_AssessAndAdjustTarget_Factory();
-    
-    NodeFactories["BTService_OutOfActiveRangeSettingHome"] = new UBTService_OutOfActiveRangeSettingHome_Factory();
-    
-    NodeFactories["BTService_OutOfTraceRangeSettingHome"] = new UBTService_OutOfTraceRangeSettingHome_Factory();
-    
-    NodeFactories["BTService_SearchTarget"] = new UBTService_SearchTarget_Factory();
-    
-    NodeFactories["BTService_AccessAndFlee"] = new UBTService_AccessAndFlee_Factory();
-    /***********************python_auto_add_service_node_factory_no_delete_end***********************/
-
-	// Task
-	NodeFactories["BTTask_Wait"] = new UBTTask_Wait_Factory();
-	NodeFactories["BTTask_ServerSetIntBB"] = new UBTTask_ServerSetIntBB_Factory();
-	NodeFactories["BTTask_Talk"] = new UBTTask_Talk_Factory();
-	/***********************python_auto_add_task_node_factory_no_delete_begin***********************/
-    NodeFactories["BTTask_MoveToHome"] = new UBTTask_MoveToHome_Factory();
-    
-    NodeFactories["BTTask_MoveToTarget"] = new UBTTask_MoveToTarget_Factory();
-    
-    NodeFactories["BTTask_MoveToPatrol"] = new UBTTask_MoveToPatrol_Factory();
-    
-    NodeFactories["BTTask_MoveToFlee"] = new UBTTask_MoveToFlee_Factory();
-    
-    NodeFactories["BTTask_AttackTarget"] = new UBTTask_AttackTarget_Factory();
-    
-    NodeFactories["BTTask_WaitBlackboardTime"] = new UBTTask_WaitBlackboardTime_Factory();
-    /***********************python_auto_add_task_node_factory_no_delete_end***********************/
 }
 //!!!ExportServerNodes_End:Don't remove!!!
 //--------------------------------------------------

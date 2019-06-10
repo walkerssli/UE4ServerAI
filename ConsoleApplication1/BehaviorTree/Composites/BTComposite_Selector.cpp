@@ -1,6 +1,10 @@
 // Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 
 #include "BehaviorTree/Composites/BTComposite_Selector.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTComposite_Selector, UBTComposite_Selector_Factory, CompositeNodeFactoryBase)
+END_DERIVED_NODE_FACTORY(UBTComposite_Selector, UBTComposite_Selector_Factory)
 
 UBTComposite_Selector::UBTComposite_Selector() : UBTCompositeNode()
 {

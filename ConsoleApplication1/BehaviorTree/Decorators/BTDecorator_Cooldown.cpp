@@ -1,6 +1,11 @@
 // Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 
 #include "BehaviorTree/Decorators/BTDecorator_Cooldown.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTDecorator_Cooldown, UBTDecorator_Cooldown_Factory, DecoratorNodeFactoryBase)
+ADD_ATTRIBUTE(Float, CoolDownTime)
+END_DERIVED_NODE_FACTORY(UBTDecorator_Cooldown, UBTDecorator_Cooldown_Factory)
 
 UBTDecorator_Cooldown::UBTDecorator_Cooldown() : UBTDecorator()
 {

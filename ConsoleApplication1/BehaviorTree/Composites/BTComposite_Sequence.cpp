@@ -1,6 +1,10 @@
 // Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 
 #include "BehaviorTree/Composites/BTComposite_Sequence.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTComposite_Sequence, UBTComposite_Sequence_Factory, CompositeNodeFactoryBase)
+END_DERIVED_NODE_FACTORY(UBTComposite_Sequence, UBTComposite_Sequence_Factory)
 
 UBTComposite_Sequence::UBTComposite_Sequence() : UBTCompositeNode()
 {

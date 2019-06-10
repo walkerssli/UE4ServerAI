@@ -41,7 +41,7 @@ public:
 	UBTNode();
 
 	static uint32 sNodeTypeFlag;
-	
+
 	std::vector<UBTService*> Services;
 
 	/**
@@ -163,13 +163,13 @@ public:
 	{
 		return bIsInstanced;
 	}
-	
+
 	/** @return node instance if bCreateNodeInstance was set */
 	const UBTNode* GetNodeInstance(const UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) const;
 	const UBTNode* GetNodeInstance(FBehaviorTreeSearchData& SearchData) const;
 	UBTNode* GetNodeInstance(const UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory);
 	UBTNode* GetNodeInstance(FBehaviorTreeSearchData& SearchData);
-	
+
 	FString NodeName;
 	uint32 NodeType;
 	FString NodeTypeName;
@@ -183,7 +183,7 @@ public:
 
 	/** parent node */
 	UBTCompositeNode* ParentNode;
-	
+
 	/** depth first index (execution order) */
 	uint16 ExecutionIndex;
 

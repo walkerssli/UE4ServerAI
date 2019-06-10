@@ -95,6 +95,7 @@ def ReadDOMTree(hostFile):
     return DOMTree
 
 def GenServices():
+    global BTManagerName
     DOMTree = ReadDOMTree(HOST_FILE)
 
     for node in DOMTree.getElementsByTagName('service'):
@@ -150,8 +151,23 @@ protected:
 #include "BehaviorTree/BlackboardComponent.h"
 #include "BehaviorTree/AIMessageTypes.h"
 #include "BehaviorTree/Blackboard/TdrReflectionErr.h"
-#include "BehaviorTree/Agents/UE4ActorAgent.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+'''
+        if BTManagerName:
+            fileContent_cpp +='''
+#include "../../../ai/BTManagerType.h"
+'''
+            fileContent_cpp = fileContent_cpp.replace("BTManagerType", BTManagerName)
 
+        content_add = '''
+BEGIN_DERIVED_NODE_FACTORY(UBTService_Example, UBTService_Example_Factory, ServiceNodeFactoryBase)
+'''
+        content_add = node_add_attribute(node, content_add)
+
+        content_add += '''END_DERIVED_NODE_FACTORY(UBTService_Example, UBTService_Example_Factory)
+'''
+        fileContent_cpp += content_add
+        fileContent_cpp +=''' 
 UBTService_Example::UBTService_Example() : UBTService()
 {
     NodeName = "BTService_Example";
@@ -171,13 +187,15 @@ void UBTService_Example::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* Node
 {
     UBTService::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
 
-    if (OwnerComp.GetAgent())
-    {
-        OwnerComp.GetAgent()->TickFuncName();
-    }
+    //if (OwnerComp.GetBTManager())
+    //{
+    //    ((MAYEX::CUE4BTManager*)(OwnerComp.GetBTManager()))->TickFuncName();
+    //}
 }
 '''
             tickfunc_cpp = tickfunc_cpp.replace("BTService_Example", name)
+            if BTManagerName:
+                tickfunc_cpp = tickfunc_cpp.replace("//", "")
             para_content = ''
             para_content = func_para_use_add_attribute(node, para_content, False)
             tickfunc_cpp = tickfunc_cpp.replace("TickFuncName()", tickfunc + '(' + para_content + ')')
@@ -196,13 +214,15 @@ void UBTService_Example::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* Node
             OnBecomeRelevant_cpp ='''
 void UBTService_Example::OnBecomeRelevant(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
-    if (OwnerComp.GetAgent())
-    {
-        OwnerComp.GetAgent()->OnBecomeRelevantName();
-    }
+    //if (OwnerComp.GetBTManager())
+    //{
+    //    ((MAYEX::CUE4BTManager*)(OwnerComp.GetBTManager()))->OnBecomeRelevantName();
+    //}
 }
 '''
             OnBecomeRelevant_cpp = OnBecomeRelevant_cpp.replace("BTService_Example", name)
+            if BTManagerName:
+                OnBecomeRelevant_cpp = OnBecomeRelevant_cpp.replace("//", "")
             para_content = ''
             para_content = func_para_use_add_attribute(node, para_content, False)
             OnBecomeRelevant_cpp = OnBecomeRelevant_cpp.replace("OnBecomeRelevantName()", OnBecomeRelevant + '(' + para_content + ')')
@@ -219,33 +239,10 @@ void UBTService_Example::OnBecomeRelevant(UBehaviorTreeComponent& OwnerComp, uin
 
         WriteToFile('..\BehaviorTree\Services\\'+fileName_cpp, fileContent_cpp)
 
-
-        content_add = '''
-BEGIN_DERIVED_NODE_FACTORY(UBTService_Example, UBTService_Example_Factory, ServiceNodeFactoryBase)
-'''
-        content_add = node_add_attribute(node, content_add)
-
-        content_add += '''END_DERIVED_NODE_FACTORY
-'''
-        content_add = content_add.replace("BTService_Example", name)
-        addcode('../BehaviorTree/BehaviorTreeParseHelper.h', content_add, \
-            "/***********************python_auto_add_service_node_factory_no_delete_end***********************/")
-
-        content_add = '''#include "Services/BTService_Example.h"
-'''
-        content_add = content_add.replace("BTService_Example", name)
-        addcode('../BehaviorTree/BehaviorTreeParseHelper.h', content_add, \
-            "/***********************python_auto_add_service_node_include_file_no_delete_end***********************/")
-
-        content_add = '''
-    NodeFactories["BTService_Example"] = new UBTService_Example_Factory();
-    '''
-        content_add = content_add.replace("BTService_Example", name)
-        addcode('../BehaviorTree/BehaviorTreeManager.cpp', content_add, \
-            "/***********************python_auto_add_service_node_factory_no_delete_end***********************/")
     
 
 def GenTasks():
+    global BTManagerName
     DOMTree = ReadDOMTree(HOST_FILE)
 
     for node in DOMTree.getElementsByTagName('task'):
@@ -310,8 +307,24 @@ protected:
         fileContent_cpp = '''
 #include "BehaviorTree/Tasks/BTTask_Example.h"
 #include "BehaviorTree/BlackboardComponent.h"
-#include "BehaviorTree/Agents/UE4ActorAgent.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+'''
+        if BTManagerName:
+            fileContent_cpp +='''
+#include "../../../ai/BTManagerType.h"
+'''
+            fileContent_cpp = fileContent_cpp.replace("BTManagerType", BTManagerName)
 
+        content_add = '''
+BEGIN_DERIVED_NODE_FACTORY(UBTTask_Example, UBTTask_Example_Factory, TaskNodeFactoryBase)
+'''
+
+        content_add = node_add_attribute(node, content_add)
+
+        content_add += '''END_DERIVED_NODE_FACTORY(UBTTask_Example, UBTTask_Example_Factory)
+'''
+        fileContent_cpp += content_add
+        fileContent_cpp +='''
 UBTTask_Example::UBTTask_Example() : UBTTaskNode()
 {
     NodeName = "Talk";
@@ -332,15 +345,17 @@ UBTTask_Example::UBTTask_Example() : UBTTaskNode()
 EBTNodeResult::Type UBTTask_Example::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
     int iRet = EBTNodeResult::Succeeded;
-    if (OwnerComp.GetAgent())
-    {
-        iRet = OwnerComp.GetAgent()->EnterFuncName();
-    }
+    //if (OwnerComp.GetBTManager())
+    //{
+    //    iRet = ((MAYEX::CUE4BTManager*)(OwnerComp.GetBTManager()))->EnterFuncName();
+    //}
 
     return (EBTNodeResult::Type)iRet;
 }
 '''
             enterfunc_cpp = enterfunc_cpp.replace("BTTask_Example", name)
+            if BTManagerName:
+                enterfunc_cpp = enterfunc_cpp.replace("//", "")
             para_content = ''
             para_content = func_para_use_add_attribute(node, para_content, False)
             enterfunc_cpp = enterfunc_cpp.replace("EnterFuncName()", enterfunc + '(' + para_content + ')')
@@ -358,13 +373,15 @@ EBTNodeResult::Type UBTTask_Example::ExecuteTask(UBehaviorTreeComponent& OwnerCo
             exitfunc_cpp ='''
 void UBTTask_Example::OnTaskFinished(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, EBTNodeResult::Type TaskResult)
 {
-    if (OwnerComp.GetAgent())
-    {
-        OwnerComp.GetAgent()->ExitFuncName();
-    }
+    //if (OwnerComp.GetBTManager())
+    //{
+    //    ((MAYEX::CUE4BTManager*)(OwnerComp.GetBTManager()))->ExitFuncName();
+    //}
 }
 '''
             exitfunc_cpp = exitfunc_cpp.replace("BTTask_Example", name)
+            if BTManagerName:
+                exitfunc_cpp = exitfunc_cpp.replace("//", "")
             para_content = ''
             para_content = func_para_use_add_attribute(node, para_content, False)
             exitfunc_cpp = exitfunc_cpp.replace("ExitFuncName()", exitfunc + '(' + para_content + ')')
@@ -383,10 +400,10 @@ void UBTTask_Example::OnTaskFinished(UBehaviorTreeComponent& OwnerComp, uint8* N
 void UBTTask_Example::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
 {
     EBTNodeResult::Type iRet = EBTNodeResult::Succeeded;
-    if (OwnerComp.GetAgent())
-    {
-        iRet = (EBTNodeResult::Type)OwnerComp.GetAgent()->TickFuncName();
-    }
+    //if (OwnerComp.GetBTManager())
+    //{
+    //    iRet = (EBTNodeResult::Type)((MAYEX::CUE4BTManager*)(OwnerComp.GetBTManager()))->TickFuncName();
+    //}
 
     if (iRet != EBTNodeResult::InProgress)
     {
@@ -395,6 +412,8 @@ void UBTTask_Example::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMem
 }
 '''
             tickfunc_cpp = tickfunc_cpp.replace("BTTask_Example", name)
+            if BTManagerName:
+                tickfunc_cpp = tickfunc_cpp.replace("//", "")
             para_content = ""
             para_content = func_para_use_add_attribute(node, para_content, False)
             tickfunc_cpp = tickfunc_cpp.replace("TickFuncName()", tickfunc + '(' + para_content + ')')
@@ -413,15 +432,17 @@ void UBTTask_Example::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMem
 EBTNodeResult::Type UBTTask_Example::AbortTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
     int iRet = EBTNodeResult::Aborted;
-    if (OwnerComp.GetAgent())
-    {
-        iRet = OwnerComp.GetAgent()->AbortFuncName();
-    }
+    //if (OwnerComp.GetBTManager())
+    //{
+    //    iRet = ((MAYEX::CUE4BTManager*)(OwnerComp.GetBTManager()))->AbortFuncName();
+    //}
 
     return (EBTNodeResult::Type)iRet;
 }
 '''
             abortfunc_cpp = abortfunc_cpp.replace("BTTask_Example", name)
+            if BTManagerName:
+                abortfunc_cpp = abortfunc_cpp.replace("//", "")
             para_content = ''
             para_content = func_para_use_add_attribute(node, para_content, False)
             abortfunc_cpp = abortfunc_cpp.replace("AbortFuncName()", abortfunc + '(' + para_content + ')')
@@ -437,128 +458,6 @@ EBTNodeResult::Type UBTTask_Example::AbortTask(UBehaviorTreeComponent& OwnerComp
 
         WriteToFile('..\BehaviorTree\Tasks\\'+fileName_cpp, fileContent_cpp)
 
-        content_add = '''
-BEGIN_DERIVED_NODE_FACTORY(UBTTask_Example, UBTTask_Example_Factory, TaskNodeFactoryBase)
-'''
-
-        content_add = node_add_attribute(node, content_add)
-
-        content_add += '''END_DERIVED_NODE_FACTORY
-'''
-        content_add = content_add.replace("BTTask_Example", name)
-        addcode('../BehaviorTree/BehaviorTreeParseHelper.h', content_add, \
-            "/***********************python_auto_add_task_node_factory_no_delete_end***********************/")
-
-        content_add = '''#include "Tasks/BTTask_Example.h"
-'''
-        content_add = content_add.replace("BTTask_Example", name)
-        addcode('../BehaviorTree/BehaviorTreeParseHelper.h', content_add, \
-            "/***********************python_auto_add_task_node_include_file_no_delete_end***********************/")
-
-        content_add = '''
-    NodeFactories["BTTask_Example"] = new UBTTask_Example_Factory();
-    '''
-        content_add = content_add.replace("BTTask_Example", name)
-        addcode('../BehaviorTree/BehaviorTreeManager.cpp', content_add, \
-            "/***********************python_auto_add_task_node_factory_no_delete_end***********************/")
-
-def GenAgents():
-    global BTManagerName
-    name = 'UE4ActorAgent'
-    fileName_h = name + ".h"
-    fileName_cpp = name + ".cpp"
-    fileContent_h = '''
-#pragma once
-
-class UE4ActorAgent
-{
-public:
-    UE4ActorAgent();
-
-    int Init(void* pBTManager);
-'''
-
-    for func in agentFuncs:
-        func_h ='''
-    returntype FuncName();
-'''
-        func_h = func_h.replace("returntype", agentFuncsParas[func]['func_return_type'])
-        fileContent_h += func_h.replace("FuncName()", func + "(" + agentFuncsParas[func]['func_para_def']+ ")")
-
-    fileContent_h +='''
-private:
-    void* m_pBTManager;
-};
-
-'''
-    WriteToFile('..\BehaviorTree\Agents\\'+fileName_h, fileContent_h)
-
-    fileContent_cpp = '''
-#include "BehaviorTree/Agents/UE4ActorAgent.h"
-#include "BehaviorTree/BehaviorTreeTypes.h"
-'''
-    if BTManagerName:
-        fileContent_cpp +='''
-#include "../../../ai/BTManagerType.h"
-'''
-        fileContent_cpp = fileContent_cpp.replace("BTManagerType", BTManagerName)
-
-    fileContent_cpp += '''
-UE4ActorAgent::UE4ActorAgent()
-{
-    m_pBTManager = NULL;
-}
-
-int UE4ActorAgent::Init(void* pBTManager)
-{
-    m_pBTManager = pBTManager;
-
-    return 0;
-}
-'''
-
-    for func in agentFuncs:
-        func_cpp ='''
-returntype UE4ActorAgent::FuncName()
-{
-    if (m_pBTManager)
-    {
-'''
-        func_cpp = func_cpp.replace("returntype", agentFuncsParas[func]['func_return_type'])
-        func_cpp = func_cpp.replace("FuncName()", func + "(" + agentFuncsParas[func]['func_para_def']+ ")")
-
-
-        if BTManagerName:
-            if agentFuncsParas[func]['func_return_type'] == 'void':
-                func_cpp +='''
-        ((BTManagerType*)(m_pBTManager))->LogBTNodeInfo("FuncName");
-        ((BTManagerType*)(m_pBTManager))->FuncName();
-'''
-            else:
-                func_cpp +='''
-        ((BTManagerType*)(m_pBTManager))->LogBTNodeInfo("FuncName");
-        return ((BTManagerType*)(m_pBTManager))->FuncName();
-'''
-            func_cpp = func_cpp.replace("BTManagerType", "MAYEX::"+BTManagerName)
-            func_cpp = func_cpp.replace("FuncName()", func + "(" + agentFuncsParas[func]['func_para_use']+ ")")
-            
-        if agentFuncsParas[func]['func_return_type'] == 'void':
-            func_cpp += '''
-    }
-}
-'''
-        else:
-            func_cpp += '''
-    }
-
-    return EBTNodeResult::Succeeded;
-}
-'''
-
-        fileContent_cpp += func_cpp.replace("FuncName", func)
-
-    WriteToFile('..\BehaviorTree\Agents\\'+fileName_cpp, fileContent_cpp)
-
 
 def WriteToFile(fileName, fileContent):
     f = open(fileName, 'w')
@@ -571,32 +470,7 @@ def main():
         global BTManagerName
         BTManagerName = 'CUE4BTManager'
 
-    clearcode('../BehaviorTree/BehaviorTreeParseHelper.h', \
-            "/***********************python_auto_add_service_node_include_file_no_delete_begin***********************/", \
-            "/***********************python_auto_add_service_node_include_file_no_delete_end***********************/")
-
-    clearcode('../BehaviorTree/BehaviorTreeParseHelper.h', \
-            "/***********************python_auto_add_task_node_include_file_no_delete_begin***********************/", \
-            "/***********************python_auto_add_task_node_include_file_no_delete_end***********************/")
-
-    clearcode('../BehaviorTree/BehaviorTreeParseHelper.h', \
-            "/***********************python_auto_add_service_node_factory_no_delete_begin***********************/", \
-            "/***********************python_auto_add_service_node_factory_no_delete_end***********************/")
-
-    clearcode('../BehaviorTree/BehaviorTreeParseHelper.h', \
-            "/***********************python_auto_add_task_node_factory_no_delete_begin***********************/", \
-            "/***********************python_auto_add_task_node_factory_no_delete_end***********************/")
-
-    clearcode('../BehaviorTree/BehaviorTreeManager.cpp', \
-            "/***********************python_auto_add_service_node_factory_no_delete_begin***********************/", \
-            "/***********************python_auto_add_service_node_factory_no_delete_end***********************/")
-
-    clearcode('../BehaviorTree/BehaviorTreeManager.cpp', \
-            "/***********************python_auto_add_task_node_factory_no_delete_begin***********************/", \
-            "/***********************python_auto_add_task_node_factory_no_delete_end***********************/")
-
     GenServices()
     GenTasks()
-    GenAgents()
 
 main()

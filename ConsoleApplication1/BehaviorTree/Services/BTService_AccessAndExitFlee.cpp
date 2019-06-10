@@ -3,8 +3,12 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "BehaviorTree/AIMessageTypes.h"
 #include "BehaviorTree/Blackboard/TdrReflectionErr.h"
-#include "BehaviorTree/Agents/UE4ActorAgent.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
 
+BEGIN_DERIVED_NODE_FACTORY(UBTService_AccessAndExitFlee, UBTService_AccessAndExitFlee_Factory, ServiceNodeFactoryBase)
+ADD_ATTRIBUTE(Str, BlackboardKey)
+END_DERIVED_NODE_FACTORY(UBTService_AccessAndExitFlee, UBTService_AccessAndExitFlee_Factory)
+ 
 UBTService_AccessAndExitFlee::UBTService_AccessAndExitFlee() : UBTService()
 {
     NodeName = "BTService_AccessAndExitFlee";
@@ -15,8 +19,8 @@ void UBTService_AccessAndExitFlee::TickNode(UBehaviorTreeComponent& OwnerComp, u
 {
     UBTService::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
 
-    if (OwnerComp.GetAgent())
-    {
-        OwnerComp.GetAgent()->TickAccessAndExitFlee(this, BlackboardKey.c_str());
-    }
+    //if (OwnerComp.GetBTManager())
+    //{
+    //    ((MAYEX::CUE4BTManager*)(OwnerComp.GetBTManager()))->TickAccessAndExitFlee(this, BlackboardKey.c_str());
+    //}
 }

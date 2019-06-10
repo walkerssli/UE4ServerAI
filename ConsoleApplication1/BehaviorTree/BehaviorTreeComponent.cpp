@@ -4,7 +4,6 @@
 #include "BehaviorTree/BTTaskNode.h"
 #include "BehaviorTree/BTDecorator.h"
 #include "BehaviorTree/BTService.h"
-#include "BehaviorTree/Agents/UE4ActorAgent.h"
 // #include "VisualLogger/VisualLoggerTypes.h"
 // #include "VisualLogger/VisualLogger.h"
 #include "BehaviorTree/BTCompositeNode.h"
@@ -62,9 +61,9 @@ UBehaviorTreeComponent::UBehaviorTreeComponent()
 	bIsPaused = false;
 	BlackboardComp = NULL;
 
-	m_pUE4ActorAgent = new UE4ActorAgent();
 	mDeltaSeconds = 0.0f;
 	m_pBehaviorTree = NULL;
+	m_pBTManager = NULL;
 }
 
 UBehaviorTreeComponent::~UBehaviorTreeComponent()
@@ -72,9 +71,16 @@ UBehaviorTreeComponent::~UBehaviorTreeComponent()
 	UninitializeComponent();
 }
 
-UE4ActorAgent* UBehaviorTreeComponent::GetAgent()
+void* UBehaviorTreeComponent::GetBTManager()
 {
-	return m_pUE4ActorAgent;
+	return m_pBTManager;
+}
+
+int UBehaviorTreeComponent::InitBTManager(void* pBTManager)
+{
+	m_pBTManager = pBTManager;
+
+	return 0;
 }
 
 void UBehaviorTreeComponent::UninitializeComponent()
@@ -91,9 +97,6 @@ void UBehaviorTreeComponent::UninitializeComponent()
 	}
 
 	// RemoveAllInstances();
-
-	delete m_pUE4ActorAgent;
-	m_pUE4ActorAgent = NULL;
 
 	UnregistActorDataToBB(mActorID, m_bbName);
 

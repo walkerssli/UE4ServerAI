@@ -1,6 +1,12 @@
 #include "BehaviorTree/Tasks/BTTask_ServerSetIntBB.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "BehaviorTree/AIMessageTypes.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTTask_ServerSetIntBB, UBTTask_ServerSetIntBB_Factory, TaskNodeFactoryBase)
+ADD_ATTRIBUTE(Str, BBKey)
+ADD_ATTRIBUTE(Int, BBValue)
+END_DERIVED_NODE_FACTORY(UBTTask_ServerSetIntBB, UBTTask_ServerSetIntBB_Factory)
 
 UBTTask_ServerSetIntBB::UBTTask_ServerSetIntBB() : UBTTaskNode()
 {

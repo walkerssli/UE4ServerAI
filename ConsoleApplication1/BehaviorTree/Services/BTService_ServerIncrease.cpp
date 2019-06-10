@@ -4,6 +4,11 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "BehaviorTree/AIMessageTypes.h"
 #include "../Blackboard/TdrReflectionErr.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTService_ServerIncrease, UBTService_ServerIncrease_Factory, ServiceNodeFactoryBase)
+ADD_ATTRIBUTE(Str, IncreaseKey)
+END_DERIVED_NODE_FACTORY(UBTService_ServerIncrease, UBTService_ServerIncrease_Factory)
 
 UBTService_ServerIncrease::UBTService_ServerIncrease() : UBTService()
 {

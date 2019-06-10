@@ -3,8 +3,13 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "BehaviorTree/AIMessageTypes.h"
 #include "BehaviorTree/Blackboard/TdrReflectionErr.h"
-#include "BehaviorTree/Agents/UE4ActorAgent.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
 
+BEGIN_DERIVED_NODE_FACTORY(UBTService_AssessAndAdjustTarget, UBTService_AssessAndAdjustTarget_Factory, ServiceNodeFactoryBase)
+ADD_ATTRIBUTE(Str, BlackboardKey)
+ADD_ATTRIBUTE(Str, BlackboardKey2)
+END_DERIVED_NODE_FACTORY(UBTService_AssessAndAdjustTarget, UBTService_AssessAndAdjustTarget_Factory)
+ 
 UBTService_AssessAndAdjustTarget::UBTService_AssessAndAdjustTarget() : UBTService()
 {
     NodeName = "BTService_AssessAndAdjustTarget";
@@ -15,8 +20,8 @@ void UBTService_AssessAndAdjustTarget::TickNode(UBehaviorTreeComponent& OwnerCom
 {
     UBTService::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
 
-    if (OwnerComp.GetAgent())
-    {
-        OwnerComp.GetAgent()->TickAssessAndAdjustTarget(this, BlackboardKey.c_str(), BlackboardKey2.c_str());
-    }
+    //if (OwnerComp.GetBTManager())
+    //{
+    //    ((MAYEX::CUE4BTManager*)(OwnerComp.GetBTManager()))->TickAssessAndAdjustTarget(this, BlackboardKey.c_str(), BlackboardKey2.c_str());
+    //}
 }

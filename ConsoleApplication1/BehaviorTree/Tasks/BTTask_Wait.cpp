@@ -1,6 +1,12 @@
 // Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 
 #include "BehaviorTree/Tasks/BTTask_Wait.h"
+#include "BehaviorTree/BehaviorTreeParseHelper.h"
+
+BEGIN_DERIVED_NODE_FACTORY(UBTTask_Wait, UBTTask_Wait_Factory, TaskNodeFactoryBase)
+ADD_ATTRIBUTE(Float, WaitTime)
+ADD_ATTRIBUTE(Float, RandomDeviation)
+END_DERIVED_NODE_FACTORY(UBTTask_Wait, UBTTask_Wait_Factory)
 
 UBTTask_Wait::UBTTask_Wait() : UBTTaskNode()
 {
